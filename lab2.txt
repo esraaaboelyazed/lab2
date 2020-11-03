@@ -1,0 +1,178 @@
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder
+$ makdir lab2
+bash: makdir: command not found
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder
+$ mkdir lab2
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder
+$ cd lab2
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2
+$ git init
+Initialized empty Git repository in C:/Users/lenovo/Desktop/New folder/lab2/.git/
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (master)
+$ touch index.html
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (master)
+$ git add --all
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (master)
+$ git commit -m "create html page"
+[master (root-commit) 904cfdc] create html page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (master)
+$ git branch -M main
+
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git remote add origin https://github.com/esraaaboelyazed/lab2
+
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git remote -v
+origin  https://github.com/esraaaboelyazed/lab2 (fetch)
+origin  https://github.com/esraaaboelyazed/lab2 (push)
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 219 bytes | 109.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/esraaaboelyazed/lab2
+ * [new branch]      main -> main
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git branch dev
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git branch
+  dev
+* main
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git branch test
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git branch
+  dev
+* main
+  test
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git push origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/esraaaboelyazed/lab2/pull/new/dev
+remote:
+To https://github.com/esraaaboelyazed/lab2
+ * [new branch]      dev -> dev
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ get push origin test
+bash: get: command not found
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git push origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/esraaaboelyazed/lab2/pull/new/test
+remote:
+To https://github.com/esraaaboelyazed/lab2
+ * [new branch]      test -> test
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (dev)
+$ touch lab2.txt
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (dev)
+$ git add .
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (dev)
+$ git commit -m "create lab2.txt"
+[dev a1efbd6] create lab2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 lab2.txt
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (dev)
+$ git checkout main
+Switched to branch 'main'
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git merge dev
+Updating 904cfdc..a1efbd6
+Fast-forward
+ lab2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 lab2.txt
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 251 bytes | 125.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/esraaaboelyazed/lab2
+   904cfdc..a1efbd6  main -> main
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$
+--------------------------------------------------------------------
+ how to remove them locally and remotly.
+1- locally 
+git branch -d test 
+git brach -d dev
+
+2- remotly
+git push origin: dev 
+git push origin: test
+
+----------------------------------------------------------------
+$ git tag -a v1.4 -m "version v1.4"
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git push origin v1.4
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 163 bytes | 163.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/esraaaboelyazed/lab2
+ * [new tag]         v1.4 -> v1.4
+
+lenovo@DESKTOP-RHTGNP4 MINGW64 ~/Desktop/New folder/lab2 (main)
+$ git show v1.4
+tag v1.4
+Tagger: esraaaboelyazed <esraaboelyazed@gmail.com>
+Date:   Tue Nov 3 13:31:01 2020 +0200
+
+version v1.4
+
+commit a1efbd6ba190b08424081f3a07733d6c3d2f9045 (HEAD -> main, tag: v1.4, origin/main, dev)
+Author: esraaaboelyazed <esraaboelyazed@gmail.com>
+Date:   Tue Nov 3 13:18:47 2020 +0200
+
+    create lab2.txt
+
+diff --git a/lab2.txt b/lab2.txt
+new file mode 100644
+index 0000000..e69de29
+---------------------------------------
+how to delete tag locally and remotely.
+1- locally
+git tag -d v1.4
+
+2-remotly
+git push origin --delete v1.4
+
+---------------------------------------------------
